@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet" />
+
+  <!--Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+  <link rel="icon" href="public/images/logo_favicon.ico" />
+  <title>Product</title>
+</head>
+
+<body id="product-page">
+  <!---------------- Nav Bar ---------------->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img class="nav-logo" src="public/images/freya_logo.png" alt="Freya Fashion Logo" />
+      </a>
+      <ul class="navbar-nav me-auto mb2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+      <form action="search_results.html" method="get">
+        <div class="input-group">
+          <input class="search-bar form-control" type="search" id="search" name="search" placeholder="Search" />
+          <div class="input-group-append">
+            <input class="search-btn search-icon" type="image" src="public/images/search.png" alt="Search" />
+          </div>
+        </div>
+      </form>
+      <a class="sign-up" href="#">Sign Up</a>
+      <div class="d-nav-icons">
+        <button class="icon-btn">
+          <img class="nav-icon" src="public/images/account.png" />
+        </button>
+        <button class="icon-btn">
+          <img class="nav-icon" src="public/images/facourites.png" />
+        </button>
+        <button class="icon-btn">
+          <img class="nav-icon" src="public/images/cart.png" />
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!---------------- Product ---------------->
+  <div class="product-container">
+    <div class="row">
+      <div class="col-2 image-container"></div>
+      <div class="col-2 details-container">
+        <div class="product-header"></div>
+        <form onsubmit="return false" class="purchase">
+          <label for="quantity">Quantity: </label>
+          <select id="quantity" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <label for="size">Size: </label>
+          <select id="size" name="size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">X-Large</option>
+          </select>
+          <input class="add-to-cart" type="submit" value="Add to Cart" />
+        </form>
+        <div class="product-details">
+          <h4>Product Details</h4>
+        </div>
+      </div>
+    </div>
+    <!---------------- Footer ---------------->
+    <footer>
+      <img class="footer-logo" src="public/images/freya_logo.png" alt="Freya Fashion Logo" />
+    </footer>
+    <!------------- JavaScript ------------->
+    <script src="js/allProducts.js"></script>
+    <script>document.querySelector("#product-page").onload = function () { loadProductPage() };</script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
